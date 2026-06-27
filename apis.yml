@@ -61,7 +61,7 @@ common:
   type: Portal
 - url: https://humaans.io
   name: Humaans Website
-  type: WebSite
+  type: Website
 - url: https://docs.humaans.io
   name: Humaans Help Center
   type: Documentation
@@ -73,10 +73,10 @@ common:
   type: GettingStarted
 - url: https://app.humaans.io
   name: Humaans App
-  type: SignIn
+  type: Login
 - url: https://humaans.io/get-started
   name: Get Started
-  type: SignUp
+  type: Signup
 - url: https://humaans.io/pricing
   name: Pricing
   type: Pricing
@@ -127,19 +127,19 @@ common:
   type: GitHubOrganization
 - url: https://github.com/humaans/figbird
   name: figbird (Feathers data fetching for React)
-  type: SDK
+  type: SDKs
 - url: https://github.com/humaans/next-img
   name: next-img (Next.js image plugin)
-  type: SDK
+  type: SDKs
 - url: https://github.com/humaans/react-machine
   name: react-machine (state machine hook)
-  type: SDK
+  type: SDKs
 - url: https://github.com/humaans/react-space-router
   name: react-space-router (Space router for React)
-  type: SDK
+  type: SDKs
 - url: https://github.com/humaans/workalendar
   name: workalendar (worldwide holidays/workdays toolkit)
-  type: Tool
+  type: Tools
 - url: https://apps.apple.com/app/humaans/id1610537316
   name: Humaans iOS App
   type: Application
@@ -148,7 +148,7 @@ common:
   type: Application
 - url: https://www.g2.com/products/humaans/reviews
   name: Humaans on G2
-  type: Reviews
+  type: Review
 - type: Features
   data:
   - REST HRIS API with consistent resource-oriented URLs, JSON in / JSON out, and standard HTTP verbs and status codes
