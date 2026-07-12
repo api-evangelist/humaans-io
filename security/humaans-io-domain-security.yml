@@ -1,0 +1,29 @@
+generated: '2026-07-11'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: humaans.io
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Aug 25 13:23:52 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: docs.humaans.io
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 19 17:53:42 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: app.humaans.io
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 27 18:14:44 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+domains:
+- domain: humaans.io
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: reject

@@ -1,0 +1,14 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/humaans-api-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  bearerFormat: token
+  description: Bearer access token issued by Humaans with OAuth-style scopes
+  sources:
+  - openapi/humaans-api-openapi.yml
