@@ -1,0 +1,46 @@
+openapi: 3.1.0
+info:
+  title: Humaans Audit Events API
+  version: '1.0'
+  description: 'The Humaans HRIS API exposes the People, Compensations, Time Away, Documents,
+
+    Locations, Job Roles, Custom Fields, Performance, Timesheet, Webhooks, and
+
+    related resources of the Humaans system of record. The API is REST-based,
+
+    accepts and returns JSON, and uses Bearer token authentication scoped via
+
+    OAuth scopes (public:read, private:read, private:write, compensations:read,
+
+    compensations:write, documents:read, documents:write, webhooks:manage).
+
+    '
+  contact:
+    name: Humaans
+    url: https://docs.humaans.io/api/
+  termsOfService: https://humaans.io/terms
+servers:
+- url: https://app.humaans.io/api
+  description: Humaans API production endpoint
+security:
+- bearerAuth: []
+tags:
+- name: Audit Events
+  description: Read-only audit trail
+paths:
+  /audit-events:
+    get:
+      tags:
+      - Audit Events
+      summary: List Audit Events
+      operationId: listAuditEvents
+      responses:
+        '200':
+          description: Audit event list
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: token
+      description: Bearer access token issued by Humaans with OAuth-style scopes

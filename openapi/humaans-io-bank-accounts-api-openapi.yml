@@ -1,0 +1,88 @@
+openapi: 3.1.0
+info:
+  title: Humaans Audit Events Bank Accounts API
+  version: '1.0'
+  description: 'The Humaans HRIS API exposes the People, Compensations, Time Away, Documents,
+
+    Locations, Job Roles, Custom Fields, Performance, Timesheet, Webhooks, and
+
+    related resources of the Humaans system of record. The API is REST-based,
+
+    accepts and returns JSON, and uses Bearer token authentication scoped via
+
+    OAuth scopes (public:read, private:read, private:write, compensations:read,
+
+    compensations:write, documents:read, documents:write, webhooks:manage).
+
+    '
+  contact:
+    name: Humaans
+    url: https://docs.humaans.io/api/
+  termsOfService: https://humaans.io/terms
+servers:
+- url: https://app.humaans.io/api
+  description: Humaans API production endpoint
+security:
+- bearerAuth: []
+tags:
+- name: Bank Accounts
+  description: Employee bank account records
+paths:
+  /bank-accounts:
+    get:
+      tags:
+      - Bank Accounts
+      summary: List Bank Accounts
+      operationId: listBankAccounts
+      responses:
+        '200':
+          description: Bank account list
+    post:
+      tags:
+      - Bank Accounts
+      summary: Create Bank Account
+      operationId: createBankAccount
+      responses:
+        '201':
+          description: Created
+  /bank-accounts/{id}:
+    parameters:
+    - $ref: '#/components/parameters/Id'
+    get:
+      tags:
+      - Bank Accounts
+      summary: Retrieve Bank Account
+      operationId: getBankAccount
+      responses:
+        '200':
+          description: Bank account
+    patch:
+      tags:
+      - Bank Accounts
+      summary: Update Bank Account
+      operationId: updateBankAccount
+      responses:
+        '200':
+          description: Updated
+    delete:
+      tags:
+      - Bank Accounts
+      summary: Delete Bank Account
+      operationId: deleteBankAccount
+      responses:
+        '204':
+          description: Deleted
+components:
+  parameters:
+    Id:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: token
+      description: Bearer access token issued by Humaans with OAuth-style scopes

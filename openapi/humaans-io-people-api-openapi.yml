@@ -1,0 +1,193 @@
+openapi: 3.1.0
+info:
+  title: Humaans Audit Events People API
+  version: '1.0'
+  description: 'The Humaans HRIS API exposes the People, Compensations, Time Away, Documents,
+
+    Locations, Job Roles, Custom Fields, Performance, Timesheet, Webhooks, and
+
+    related resources of the Humaans system of record. The API is REST-based,
+
+    accepts and returns JSON, and uses Bearer token authentication scoped via
+
+    OAuth scopes (public:read, private:read, private:write, compensations:read,
+
+    compensations:write, documents:read, documents:write, webhooks:manage).
+
+    '
+  contact:
+    name: Humaans
+    url: https://docs.humaans.io/api/
+  termsOfService: https://humaans.io/terms
+servers:
+- url: https://app.humaans.io/api
+  description: Humaans API production endpoint
+security:
+- bearerAuth: []
+tags:
+- name: People
+  description: Employee records, the canonical resource of the HRIS
+paths:
+  /people:
+    get:
+      tags:
+      - People
+      summary: List People
+      operationId: listPeople
+      parameters:
+      - $ref: '#/components/parameters/Limit'
+      - $ref: '#/components/parameters/Skip'
+      responses:
+        '200':
+          description: Paginated list of people
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PersonList'
+    post:
+      tags:
+      - People
+      summary: Create Person
+      operationId: createPerson
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Person'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Person'
+  /people/{id}:
+    parameters:
+    - $ref: '#/components/parameters/Id'
+    get:
+      tags:
+      - People
+      summary: Retrieve Person
+      operationId: getPerson
+      responses:
+        '200':
+          description: Person record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Person'
+    patch:
+      tags:
+      - People
+      summary: Update Person
+      operationId: updatePerson
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Person'
+      responses:
+        '200':
+          description: Updated person
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Person'
+    delete:
+      tags:
+      - People
+      summary: Delete Person
+      operationId: deletePerson
+      responses:
+        '204':
+          description: Deleted
+components:
+  parameters:
+    Id:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: string
+    Skip:
+      name: $skip
+      in: query
+      required: false
+      description: Number of results to skip for pagination
+      schema:
+        type: integer
+        default: 0
+    Limit:
+      name: $limit
+      in: query
+      required: false
+      description: Maximum results per page (default 100, max 250)
+      schema:
+        type: integer
+        default: 100
+        maximum: 250
+  schemas:
+    Person:
+      type: object
+      properties:
+        id:
+          type: string
+        firstName:
+          type: string
+        lastName:
+          type: string
+        email:
+          type: string
+          format: email
+        personalEmail:
+          type: string
+          format: email
+        phoneNumber:
+          type: string
+        jobTitle:
+          type: string
+        jobRoleId:
+          type: string
+        locationId:
+          type: string
+        companyId:
+          type: string
+        managerId:
+          type: string
+        startDate:
+          type: string
+          format: date
+        endDate:
+          type: string
+          format: date
+        employmentType:
+          type: string
+        status:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+    PersonList:
+      type: object
+      properties:
+        total:
+          type: integer
+        limit:
+          type: integer
+        skip:
+          type: integer
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Person'
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: token
+      description: Bearer access token issued by Humaans with OAuth-style scopes

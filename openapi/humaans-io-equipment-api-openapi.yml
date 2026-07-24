@@ -1,0 +1,88 @@
+openapi: 3.1.0
+info:
+  title: Humaans Audit Events Equipment API
+  version: '1.0'
+  description: 'The Humaans HRIS API exposes the People, Compensations, Time Away, Documents,
+
+    Locations, Job Roles, Custom Fields, Performance, Timesheet, Webhooks, and
+
+    related resources of the Humaans system of record. The API is REST-based,
+
+    accepts and returns JSON, and uses Bearer token authentication scoped via
+
+    OAuth scopes (public:read, private:read, private:write, compensations:read,
+
+    compensations:write, documents:read, documents:write, webhooks:manage).
+
+    '
+  contact:
+    name: Humaans
+    url: https://docs.humaans.io/api/
+  termsOfService: https://humaans.io/terms
+servers:
+- url: https://app.humaans.io/api
+  description: Humaans API production endpoint
+security:
+- bearerAuth: []
+tags:
+- name: Equipment
+  description: Equipment assigned to employees
+paths:
+  /equipment:
+    get:
+      tags:
+      - Equipment
+      summary: List Equipment
+      operationId: listEquipment
+      responses:
+        '200':
+          description: Equipment list
+    post:
+      tags:
+      - Equipment
+      summary: Create Equipment
+      operationId: createEquipment
+      responses:
+        '201':
+          description: Created
+  /equipment/{id}:
+    parameters:
+    - $ref: '#/components/parameters/Id'
+    get:
+      tags:
+      - Equipment
+      summary: Retrieve Equipment
+      operationId: getEquipment
+      responses:
+        '200':
+          description: Equipment
+    patch:
+      tags:
+      - Equipment
+      summary: Update Equipment
+      operationId: updateEquipment
+      responses:
+        '200':
+          description: Updated
+    delete:
+      tags:
+      - Equipment
+      summary: Delete Equipment
+      operationId: deleteEquipment
+      responses:
+        '204':
+          description: Deleted
+components:
+  parameters:
+    Id:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: token
+      description: Bearer access token issued by Humaans with OAuth-style scopes

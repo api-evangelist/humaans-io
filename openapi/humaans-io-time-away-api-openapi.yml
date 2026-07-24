@@ -1,0 +1,115 @@
+openapi: 3.1.0
+info:
+  title: Humaans Audit Events Time Away API
+  version: '1.0'
+  description: 'The Humaans HRIS API exposes the People, Compensations, Time Away, Documents,
+
+    Locations, Job Roles, Custom Fields, Performance, Timesheet, Webhooks, and
+
+    related resources of the Humaans system of record. The API is REST-based,
+
+    accepts and returns JSON, and uses Bearer token authentication scoped via
+
+    OAuth scopes (public:read, private:read, private:write, compensations:read,
+
+    compensations:write, documents:read, documents:write, webhooks:manage).
+
+    '
+  contact:
+    name: Humaans
+    url: https://docs.humaans.io/api/
+  termsOfService: https://humaans.io/terms
+servers:
+- url: https://app.humaans.io/api
+  description: Humaans API production endpoint
+security:
+- bearerAuth: []
+tags:
+- name: Time Away
+  description: Time off, holidays, leave allocations, policies, and types
+paths:
+  /time-away:
+    get:
+      tags:
+      - Time Away
+      summary: List Time Away
+      operationId: listTimeAway
+      responses:
+        '200':
+          description: Time away list
+    post:
+      tags:
+      - Time Away
+      summary: Create Time Away
+      operationId: createTimeAway
+      responses:
+        '201':
+          description: Created
+  /time-away/{id}:
+    parameters:
+    - $ref: '#/components/parameters/Id'
+    get:
+      tags:
+      - Time Away
+      summary: Retrieve Time Away
+      operationId: getTimeAway
+      responses:
+        '200':
+          description: Time away record
+    patch:
+      tags:
+      - Time Away
+      summary: Update Time Away
+      operationId: updateTimeAway
+      responses:
+        '200':
+          description: Updated
+    delete:
+      tags:
+      - Time Away
+      summary: Delete Time Away
+      operationId: deleteTimeAway
+      responses:
+        '204':
+          description: Deleted
+  /time-away-types:
+    get:
+      tags:
+      - Time Away
+      summary: List Time Away Types
+      operationId: listTimeAwayTypes
+      responses:
+        '200':
+          description: List
+  /time-away-policies:
+    get:
+      tags:
+      - Time Away
+      summary: List Time Away Policies
+      operationId: listTimeAwayPolicies
+      responses:
+        '200':
+          description: List
+  /time-away-allocations:
+    get:
+      tags:
+      - Time Away
+      summary: List Time Away Allocations
+      operationId: listTimeAwayAllocations
+      responses:
+        '200':
+          description: List
+components:
+  parameters:
+    Id:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: token
+      description: Bearer access token issued by Humaans with OAuth-style scopes
