@@ -1,0 +1,42 @@
+{
+  "provider": "humaans-io",
+  "sources": [
+    "humaans-io-audit-events-api-openapi.yml",
+    "humaans-io-bank-accounts-api-openapi.yml",
+    "humaans-io-companies-api-openapi.yml",
+    "humaans-io-compensations-api-openapi.yml",
+    "humaans-io-custom-fields-api-openapi.yml",
+    "humaans-io-documents-api-openapi.yml",
+    "humaans-io-equipment-api-openapi.yml",
+    "humaans-io-job-roles-api-openapi.yml",
+    "humaans-io-locations-api-openapi.yml",
+    "humaans-io-people-api-openapi.yml",
+    "humaans-io-performance-api-openapi.yml",
+    "humaans-io-time-away-api-openapi.yml",
+    "humaans-io-timesheet-api-openapi.yml",
+    "humaans-io-webhooks-api-openapi.yml",
+    "humaans-io-working-patterns-api-openapi.yml"
+  ],
+  "outputs": [
+    "humaans-io-audit-events-api-openapi.yml",
+    "humaans-io-bank-accounts-api-openapi.yml",
+    "humaans-io-companies-api-openapi.yml",
+    "humaans-io-compensations-api-openapi.yml",
+    "humaans-io-custom-fields-api-openapi.yml",
+    "humaans-io-documents-api-openapi.yml",
+    "humaans-io-equipment-api-openapi.yml",
+    "humaans-io-job-roles-api-openapi.yml",
+    "humaans-io-locations-api-openapi.yml",
+    "humaans-io-people-api-openapi.yml",
+    "humaans-io-performance-api-openapi.yml",
+    "humaans-io-time-away-api-openapi.yml",
+    "humaans-io-timesheet-api-openapi.yml",
+    "humaans-io-webhooks-api-openapi.yml",
+    "humaans-io-working-patterns-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
