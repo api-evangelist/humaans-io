@@ -1,0 +1,236 @@
+{
+  "item": [
+    {
+      "id": "1e0f1dea-fdc4-44cd-a8a2-63b082b7f7e1",
+      "name": "Performance",
+      "description": {
+        "content": "Performance reviews, cycles, templates, and ratings",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4aef8e44-b6a0-4159-b9df-a16a56b5f235",
+          "name": "List Performance Reviews",
+          "request": {
+            "name": "List Performance Reviews",
+            "description": {},
+            "url": {
+              "path": [
+                "performance-reviews"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0c87c22e-009e-43b7-85e2-ca4e76fa4e2b",
+              "name": "List",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "performance-reviews"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3841ec70-cd2e-40f3-a329-194cb6e25b9a",
+          "name": "List Performance Cycles",
+          "request": {
+            "name": "List Performance Cycles",
+            "description": {},
+            "url": {
+              "path": [
+                "performance-cycles"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7cca4eb4-2ef8-4435-a6d8-6c6ac684cbae",
+              "name": "List",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "performance-cycles"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f8afbc8c-603f-4205-8220-a5b3e6b84960",
+          "name": "List Performance Templates",
+          "request": {
+            "name": "List Performance Templates",
+            "description": {},
+            "url": {
+              "path": [
+                "performance-templates"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a870df0a-e968-417a-88f5-e6fcfdf11309",
+              "name": "List",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "performance-templates"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://app.humaans.io/api",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "8fed5217-c6a5-4142-bfc2-7c29f423f8c5",
+    "name": "Humaans Audit Events Performance API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Humaans HRIS API exposes the People, Compensations, Time Away, Documents,\nLocations, Job Roles, Custom Fields, Performance, Timesheet, Webhooks, and\nrelated resources of the Humaans system of record. The API is REST-based,\naccepts and returns JSON, and uses Bearer token authentication scoped via\nOAuth scopes (public:read, private:read, private:write, compensations:read,\ncompensations:write, documents:read, documents:write, webhooks:manage).\n\n\nContact Support:\n Name: Humaans",
+      "type": "text/plain"
+    }
+  }
+}

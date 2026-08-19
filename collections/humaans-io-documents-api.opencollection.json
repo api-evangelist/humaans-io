@@ -1,0 +1,100 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Humaans Audit Events Documents API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Documents",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Documents",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.humaans.io/api/documents"
+          },
+          "docs": "List Documents"
+        },
+        {
+          "info": {
+            "name": "Create Document",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.humaans.io/api/documents"
+          },
+          "docs": "Create Document"
+        },
+        {
+          "info": {
+            "name": "Retrieve Document",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.humaans.io/api/documents/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve Document"
+        },
+        {
+          "info": {
+            "name": "Update Document",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://app.humaans.io/api/documents/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update Document"
+        },
+        {
+          "info": {
+            "name": "Delete Document",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.humaans.io/api/documents/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete Document"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

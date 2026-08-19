@@ -1,0 +1,100 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Humaans Audit Events Job Roles API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Job Roles",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Job Roles",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.humaans.io/api/job-roles"
+          },
+          "docs": "List Job Roles"
+        },
+        {
+          "info": {
+            "name": "Create Job Role",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.humaans.io/api/job-roles"
+          },
+          "docs": "Create Job Role"
+        },
+        {
+          "info": {
+            "name": "Retrieve Job Role",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.humaans.io/api/job-roles/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve Job Role"
+        },
+        {
+          "info": {
+            "name": "Update Job Role",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://app.humaans.io/api/job-roles/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update Job Role"
+        },
+        {
+          "info": {
+            "name": "Delete Job Role",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.humaans.io/api/job-roles/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete Job Role"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

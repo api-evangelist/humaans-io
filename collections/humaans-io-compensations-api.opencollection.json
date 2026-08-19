@@ -1,0 +1,100 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Humaans Audit Events Compensations API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Compensations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Compensations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.humaans.io/api/compensations"
+          },
+          "docs": "List Compensations"
+        },
+        {
+          "info": {
+            "name": "Create Compensation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.humaans.io/api/compensations"
+          },
+          "docs": "Create Compensation"
+        },
+        {
+          "info": {
+            "name": "Retrieve Compensation",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.humaans.io/api/compensations/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve Compensation"
+        },
+        {
+          "info": {
+            "name": "Update Compensation",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://app.humaans.io/api/compensations/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update Compensation"
+        },
+        {
+          "info": {
+            "name": "Delete Compensation",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.humaans.io/api/compensations/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete Compensation"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

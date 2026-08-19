@@ -1,0 +1,100 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Humaans Audit Events Bank Accounts API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Bank Accounts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Bank Accounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.humaans.io/api/bank-accounts"
+          },
+          "docs": "List Bank Accounts"
+        },
+        {
+          "info": {
+            "name": "Create Bank Account",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.humaans.io/api/bank-accounts"
+          },
+          "docs": "Create Bank Account"
+        },
+        {
+          "info": {
+            "name": "Retrieve Bank Account",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.humaans.io/api/bank-accounts/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve Bank Account"
+        },
+        {
+          "info": {
+            "name": "Update Bank Account",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://app.humaans.io/api/bank-accounts/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update Bank Account"
+        },
+        {
+          "info": {
+            "name": "Delete Bank Account",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.humaans.io/api/bank-accounts/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete Bank Account"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,236 @@
+{
+  "item": [
+    {
+      "id": "fc950e47-0648-4297-86ea-5ec9857ee5ca",
+      "name": "Timesheet",
+      "description": {
+        "content": "Timesheet entries and submissions",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "bd4b0185-1939-439f-9f0c-b73dd0fa1176",
+          "name": "List Timesheet Entries",
+          "request": {
+            "name": "List Timesheet Entries",
+            "description": {},
+            "url": {
+              "path": [
+                "timesheet-entries"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "97b156de-efe5-4de3-b3c5-0a6b494c9911",
+              "name": "List",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "timesheet-entries"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1463c214-ff3b-49c7-98a2-3264e5ff5215",
+          "name": "Create Timesheet Entry",
+          "request": {
+            "name": "Create Timesheet Entry",
+            "description": {},
+            "url": {
+              "path": [
+                "timesheet-entries"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a76a330b-e60d-4349-91e8-a5acf0841892",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "timesheet-entries"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b511d9a3-28d8-4bac-a557-3c591c9d6004",
+          "name": "List Timesheet Submissions",
+          "request": {
+            "name": "List Timesheet Submissions",
+            "description": {},
+            "url": {
+              "path": [
+                "timesheet-submissions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ffed2fe7-cee4-4f9c-b3c3-87bfd9d0b090",
+              "name": "List",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "timesheet-submissions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://app.humaans.io/api",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "1399b614-de63-42a5-9de4-d9833750e8f3",
+    "name": "Humaans Audit Events Timesheet API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Humaans HRIS API exposes the People, Compensations, Time Away, Documents,\nLocations, Job Roles, Custom Fields, Performance, Timesheet, Webhooks, and\nrelated resources of the Humaans system of record. The API is REST-based,\naccepts and returns JSON, and uses Bearer token authentication scoped via\nOAuth scopes (public:read, private:read, private:write, compensations:read,\ncompensations:write, documents:read, documents:write, webhooks:manage).\n\n\nContact Support:\n Name: Humaans",
+      "type": "text/plain"
+    }
+  }
+}

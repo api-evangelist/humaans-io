@@ -1,0 +1,57 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Humaans Audit Events Performance API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Performance",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Performance Reviews",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.humaans.io/api/performance-reviews"
+          },
+          "docs": "List Performance Reviews"
+        },
+        {
+          "info": {
+            "name": "List Performance Cycles",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.humaans.io/api/performance-cycles"
+          },
+          "docs": "List Performance Cycles"
+        },
+        {
+          "info": {
+            "name": "List Performance Templates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.humaans.io/api/performance-templates"
+          },
+          "docs": "List Performance Templates"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

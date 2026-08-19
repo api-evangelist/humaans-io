@@ -1,0 +1,100 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Humaans Audit Events Locations API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Locations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Locations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.humaans.io/api/locations"
+          },
+          "docs": "List Locations"
+        },
+        {
+          "info": {
+            "name": "Create Location",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.humaans.io/api/locations"
+          },
+          "docs": "Create Location"
+        },
+        {
+          "info": {
+            "name": "Retrieve Location",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.humaans.io/api/locations/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve Location"
+        },
+        {
+          "info": {
+            "name": "Update Location",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://app.humaans.io/api/locations/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update Location"
+        },
+        {
+          "info": {
+            "name": "Delete Location",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.humaans.io/api/locations/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete Location"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

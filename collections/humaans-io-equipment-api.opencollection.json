@@ -1,0 +1,100 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Humaans Audit Events Equipment API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Equipment",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Equipment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.humaans.io/api/equipment"
+          },
+          "docs": "List Equipment"
+        },
+        {
+          "info": {
+            "name": "Create Equipment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.humaans.io/api/equipment"
+          },
+          "docs": "Create Equipment"
+        },
+        {
+          "info": {
+            "name": "Retrieve Equipment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.humaans.io/api/equipment/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve Equipment"
+        },
+        {
+          "info": {
+            "name": "Update Equipment",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://app.humaans.io/api/equipment/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update Equipment"
+        },
+        {
+          "info": {
+            "name": "Delete Equipment",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.humaans.io/api/equipment/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete Equipment"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,524 @@
+{
+  "item": [
+    {
+      "id": "2670e82c-fd60-4350-b64a-ee3c03995075",
+      "name": "People",
+      "description": {
+        "content": "Employee records, the canonical resource of the HRIS",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7cd05f90-bf66-4de6-ba98-601f1f2eb90e",
+          "name": "List People",
+          "request": {
+            "name": "List People",
+            "description": {},
+            "url": {
+              "path": [
+                "people"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "$limit",
+                  "value": "100",
+                  "description": "Maximum results per page (default 100, max 250)"
+                },
+                {
+                  "disabled": false,
+                  "key": "$skip",
+                  "value": "0",
+                  "description": "Number of results to skip for pagination"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "78efdd58-2767-4009-aff7-b36979ccf115",
+              "name": "Paginated list of people",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "people"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "$limit",
+                      "value": "100"
+                    },
+                    {
+                      "key": "$skip",
+                      "value": "0"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"total\": 6609,\n  \"limit\": 4497,\n  \"skip\": 5103,\n  \"data\": [\n    {\n      \"id\": \"string\",\n      \"firstName\": \"string\",\n      \"lastName\": \"string\",\n      \"email\": \"4mgIbkmoB@ntiCqxOmWsqre.lo\",\n      \"personalEmail\": \"SjEa8-vM8xH7S@aigK.gpfj\",\n      \"phoneNumber\": \"string\",\n      \"jobTitle\": \"string\",\n      \"jobRoleId\": \"string\",\n      \"locationId\": \"string\",\n      \"companyId\": \"string\",\n      \"managerId\": \"string\",\n      \"startDate\": \"2015-06-26\",\n      \"endDate\": \"2000-07-31\",\n      \"employmentType\": \"string\",\n      \"status\": \"string\",\n      \"createdAt\": \"1974-10-21T19:08:29.343Z\",\n      \"updatedAt\": \"2000-12-27T09:25:38.833Z\"\n    },\n    {\n      \"id\": \"string\",\n      \"firstName\": \"string\",\n      \"lastName\": \"string\",\n      \"email\": \"xlcb7zKwZbjU0@iMzhJzyoXHcnGSNNRGDRdRl.jo\",\n      \"personalEmail\": \"LBF7p@ysnQpaJJeHYvLYrcwCS.fgr\",\n      \"phoneNumber\": \"string\",\n      \"jobTitle\": \"string\",\n      \"jobRoleId\": \"string\",\n      \"locationId\": \"string\",\n      \"companyId\": \"string\",\n      \"managerId\": \"string\",\n      \"startDate\": \"1978-07-12\",\n      \"endDate\": \"1954-05-20\",\n      \"employmentType\": \"string\",\n      \"status\": \"string\",\n      \"createdAt\": \"1996-08-08T02:24:01.363Z\",\n      \"updatedAt\": \"1958-07-31T01:54:34.328Z\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bac6e91e-b587-4992-8eee-ef4f1aa2c7cf",
+          "name": "Create Person",
+          "request": {
+            "name": "Create Person",
+            "description": {},
+            "url": {
+              "path": [
+                "people"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<email>\",\n  \"personalEmail\": \"<email>\",\n  \"phoneNumber\": \"<string>\",\n  \"jobTitle\": \"<string>\",\n  \"jobRoleId\": \"<string>\",\n  \"locationId\": \"<string>\",\n  \"companyId\": \"<string>\",\n  \"managerId\": \"<string>\",\n  \"startDate\": \"<date>\",\n  \"endDate\": \"<date>\",\n  \"employmentType\": \"<string>\",\n  \"status\": \"<string>\",\n  \"createdAt\": \"<dateTime>\",\n  \"updatedAt\": \"<dateTime>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "f63d2ee5-33c8-4ebd-81ca-b77a8c7dd086",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "people"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<email>\",\n  \"personalEmail\": \"<email>\",\n  \"phoneNumber\": \"<string>\",\n  \"jobTitle\": \"<string>\",\n  \"jobRoleId\": \"<string>\",\n  \"locationId\": \"<string>\",\n  \"companyId\": \"<string>\",\n  \"managerId\": \"<string>\",\n  \"startDate\": \"<date>\",\n  \"endDate\": \"<date>\",\n  \"employmentType\": \"<string>\",\n  \"status\": \"<string>\",\n  \"createdAt\": \"<dateTime>\",\n  \"updatedAt\": \"<dateTime>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"firstName\": \"string\",\n  \"lastName\": \"string\",\n  \"email\": \"Ko81HPcgWrpcT@JUQSiKDdLVGoI.aazw\",\n  \"personalEmail\": \"jYzQ-a9QMLEdoCs@cLxflELOILgkUWaQvZTKFypqYmB.nspw\",\n  \"phoneNumber\": \"string\",\n  \"jobTitle\": \"string\",\n  \"jobRoleId\": \"string\",\n  \"locationId\": \"string\",\n  \"companyId\": \"string\",\n  \"managerId\": \"string\",\n  \"startDate\": \"2021-12-02\",\n  \"endDate\": \"1963-03-04\",\n  \"employmentType\": \"string\",\n  \"status\": \"string\",\n  \"createdAt\": \"2000-11-12T19:51:18.057Z\",\n  \"updatedAt\": \"2004-01-07T07:21:53.174Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5872d73a-296a-4e6b-952d-f15355006f14",
+          "name": "Retrieve Person",
+          "request": {
+            "name": "Retrieve Person",
+            "description": {},
+            "url": {
+              "path": [
+                "people",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fd552a51-6ed0-47ce-90a7-17718fec69f2",
+              "name": "Person record",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "people",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"firstName\": \"string\",\n  \"lastName\": \"string\",\n  \"email\": \"Ko81HPcgWrpcT@JUQSiKDdLVGoI.aazw\",\n  \"personalEmail\": \"jYzQ-a9QMLEdoCs@cLxflELOILgkUWaQvZTKFypqYmB.nspw\",\n  \"phoneNumber\": \"string\",\n  \"jobTitle\": \"string\",\n  \"jobRoleId\": \"string\",\n  \"locationId\": \"string\",\n  \"companyId\": \"string\",\n  \"managerId\": \"string\",\n  \"startDate\": \"2021-12-02\",\n  \"endDate\": \"1963-03-04\",\n  \"employmentType\": \"string\",\n  \"status\": \"string\",\n  \"createdAt\": \"2000-11-12T19:51:18.057Z\",\n  \"updatedAt\": \"2004-01-07T07:21:53.174Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cf877b4c-45a0-4ca6-98e6-4a6ace8ca3bf",
+          "name": "Update Person",
+          "request": {
+            "name": "Update Person",
+            "description": {},
+            "url": {
+              "path": [
+                "people",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<email>\",\n  \"personalEmail\": \"<email>\",\n  \"phoneNumber\": \"<string>\",\n  \"jobTitle\": \"<string>\",\n  \"jobRoleId\": \"<string>\",\n  \"locationId\": \"<string>\",\n  \"companyId\": \"<string>\",\n  \"managerId\": \"<string>\",\n  \"startDate\": \"<date>\",\n  \"endDate\": \"<date>\",\n  \"employmentType\": \"<string>\",\n  \"status\": \"<string>\",\n  \"createdAt\": \"<dateTime>\",\n  \"updatedAt\": \"<dateTime>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "98986e6c-3c9d-45dd-8ff1-decb7987b35f",
+              "name": "Updated person",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "people",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<email>\",\n  \"personalEmail\": \"<email>\",\n  \"phoneNumber\": \"<string>\",\n  \"jobTitle\": \"<string>\",\n  \"jobRoleId\": \"<string>\",\n  \"locationId\": \"<string>\",\n  \"companyId\": \"<string>\",\n  \"managerId\": \"<string>\",\n  \"startDate\": \"<date>\",\n  \"endDate\": \"<date>\",\n  \"employmentType\": \"<string>\",\n  \"status\": \"<string>\",\n  \"createdAt\": \"<dateTime>\",\n  \"updatedAt\": \"<dateTime>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"firstName\": \"string\",\n  \"lastName\": \"string\",\n  \"email\": \"Ko81HPcgWrpcT@JUQSiKDdLVGoI.aazw\",\n  \"personalEmail\": \"jYzQ-a9QMLEdoCs@cLxflELOILgkUWaQvZTKFypqYmB.nspw\",\n  \"phoneNumber\": \"string\",\n  \"jobTitle\": \"string\",\n  \"jobRoleId\": \"string\",\n  \"locationId\": \"string\",\n  \"companyId\": \"string\",\n  \"managerId\": \"string\",\n  \"startDate\": \"2021-12-02\",\n  \"endDate\": \"1963-03-04\",\n  \"employmentType\": \"string\",\n  \"status\": \"string\",\n  \"createdAt\": \"2000-11-12T19:51:18.057Z\",\n  \"updatedAt\": \"2004-01-07T07:21:53.174Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "35de11fd-cc07-4269-8c48-b693862a9515",
+          "name": "Delete Person",
+          "request": {
+            "name": "Delete Person",
+            "description": {},
+            "url": {
+              "path": [
+                "people",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "757d3c36-6c96-4fb2-a11f-75723bc8a08a",
+              "name": "Deleted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "people",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://app.humaans.io/api",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "6c83d848-bc54-4bab-a085-d98e02cef23b",
+    "name": "Humaans Audit Events People API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Humaans HRIS API exposes the People, Compensations, Time Away, Documents,\nLocations, Job Roles, Custom Fields, Performance, Timesheet, Webhooks, and\nrelated resources of the Humaans system of record. The API is REST-based,\naccepts and returns JSON, and uses Bearer token authentication scoped via\nOAuth scopes (public:read, private:read, private:write, compensations:read,\ncompensations:write, documents:read, documents:write, webhooks:manage).\n\n\nContact Support:\n Name: Humaans",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Humaans Audit Events Time Away API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Time Away",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Time Away",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.humaans.io/api/time-away"
+          },
+          "docs": "List Time Away"
+        },
+        {
+          "info": {
+            "name": "Create Time Away",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.humaans.io/api/time-away"
+          },
+          "docs": "Create Time Away"
+        },
+        {
+          "info": {
+            "name": "Retrieve Time Away",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.humaans.io/api/time-away/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve Time Away"
+        },
+        {
+          "info": {
+            "name": "Update Time Away",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://app.humaans.io/api/time-away/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update Time Away"
+        },
+        {
+          "info": {
+            "name": "Delete Time Away",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.humaans.io/api/time-away/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete Time Away"
+        },
+        {
+          "info": {
+            "name": "List Time Away Types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.humaans.io/api/time-away-types"
+          },
+          "docs": "List Time Away Types"
+        },
+        {
+          "info": {
+            "name": "List Time Away Policies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.humaans.io/api/time-away-policies"
+          },
+          "docs": "List Time Away Policies"
+        },
+        {
+          "info": {
+            "name": "List Time Away Allocations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.humaans.io/api/time-away-allocations"
+          },
+          "docs": "List Time Away Allocations"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

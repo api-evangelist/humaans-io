@@ -1,0 +1,57 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Humaans Audit Events Timesheet API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Timesheet",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Timesheet Entries",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.humaans.io/api/timesheet-entries"
+          },
+          "docs": "List Timesheet Entries"
+        },
+        {
+          "info": {
+            "name": "Create Timesheet Entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.humaans.io/api/timesheet-entries"
+          },
+          "docs": "Create Timesheet Entry"
+        },
+        {
+          "info": {
+            "name": "List Timesheet Submissions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.humaans.io/api/timesheet-submissions"
+          },
+          "docs": "List Timesheet Submissions"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

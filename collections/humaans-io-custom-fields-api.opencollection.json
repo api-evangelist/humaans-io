@@ -1,0 +1,68 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Humaans Audit Events Custom Fields API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Custom Fields",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Custom Fields",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.humaans.io/api/custom-fields"
+          },
+          "docs": "List Custom Fields"
+        },
+        {
+          "info": {
+            "name": "Create Custom Field",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.humaans.io/api/custom-fields"
+          },
+          "docs": "Create Custom Field"
+        },
+        {
+          "info": {
+            "name": "List Custom Values",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.humaans.io/api/custom-values"
+          },
+          "docs": "List Custom Values"
+        },
+        {
+          "info": {
+            "name": "Create Custom Value",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.humaans.io/api/custom-values"
+          },
+          "docs": "Create Custom Value"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
