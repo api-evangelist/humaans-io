@@ -189,6 +189,8 @@ apis:
   humanURL: https://docs.humaans.io/api/
   baseURL: https://app.humaans.io/api
   tags:
+  - Webhook
+  tags_raw:
   - Webhooks
   properties:
   - type: OpenAPI
@@ -213,6 +215,22 @@ apis:
     url: https://docs.humaans.io/api/introduction
 name: Humaans
 tags:
+- HR
+- HRIS
+- Human Resources
+- People Operations
+- People Analytics
+- Onboarding
+- Offboarding
+- Performance Management
+- Time Off
+- Compensation
+- Workflow-Automation
+- AI Companion
+- Agentic AI
+- UK
+- London
+tags_raw:
 - HR
 - HRIS
 - Human Resources
