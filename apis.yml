@@ -119,6 +119,8 @@ apis:
   humanURL: https://docs.humaans.io/api/
   baseURL: https://app.humaans.io/api
   tags:
+  - Location
+  tags_raw:
   - Locations
   properties:
   - type: OpenAPI
@@ -215,9 +217,8 @@ apis:
     url: https://docs.humaans.io/api/introduction
 name: Humaans
 tags:
-- HR
-- HRIS
 - Human Resources
+- HRIS
 - People Operations
 - People Analytics
 - Onboarding
@@ -228,7 +229,7 @@ tags:
 - Workflow-Automation
 - AI Companion
 - Agentic AI
-- UK
+- United Kingdom
 - London
 tags_raw:
 - HR
