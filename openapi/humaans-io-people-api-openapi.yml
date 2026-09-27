@@ -102,6 +102,30 @@ paths:
         '204':
           description: Deleted
 components:
+  parameters:
+    Limit:
+      name: $limit
+      in: query
+      required: false
+      description: Maximum results per page (default 100, max 250)
+      schema:
+        type: integer
+        default: 100
+        maximum: 250
+    Id:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: string
+    Skip:
+      name: $skip
+      in: query
+      required: false
+      description: Number of results to skip for pagination
+      schema:
+        type: integer
+        default: 0
   schemas:
     Person:
       type: object
@@ -159,30 +183,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Person'
-  parameters:
-    Limit:
-      name: $limit
-      in: query
-      required: false
-      description: Maximum results per page (default 100, max 250)
-      schema:
-        type: integer
-        default: 100
-        maximum: 250
-    Id:
-      name: id
-      in: path
-      required: true
-      schema:
-        type: string
-    Skip:
-      name: $skip
-      in: query
-      required: false
-      description: Number of results to skip for pagination
-      schema:
-        type: integer
-        default: 0
   securitySchemes:
     bearerAuth:
       type: http

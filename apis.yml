@@ -226,9 +226,9 @@ tags:
 - Performance Management
 - Time Off
 - Compensation
-- Workflow-Automation
+- Workflow Automation
 - AI Companion
-- Agentic AI
+- AI Agents
 - United Kingdom
 - London
 tags_raw:
@@ -247,6 +247,7 @@ tags_raw:
 - Agentic AI
 - UK
 - London
+- Workflow-Automation
 kind: contract
 deliveryModel:
   model: saas
