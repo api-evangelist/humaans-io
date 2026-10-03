@@ -103,6 +103,14 @@ paths:
           description: Deleted
 components:
   parameters:
+    Skip:
+      name: $skip
+      in: query
+      required: false
+      description: Number of results to skip for pagination
+      schema:
+        type: integer
+        default: 0
     Limit:
       name: $limit
       in: query
@@ -118,14 +126,6 @@ components:
       required: true
       schema:
         type: string
-    Skip:
-      name: $skip
-      in: query
-      required: false
-      description: Number of results to skip for pagination
-      schema:
-        type: integer
-        default: 0
   schemas:
     Person:
       type: object
