@@ -277,6 +277,9 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/humaans-io.png
 access: 3rd-Party
 common:
+- type: CapabilityMap
+  url: capabilities/humaans-io-capability-edges.yml
+  name: Humaans Business Capability Map
 - type: AgenticAccess
   url: agentic-access/humaans-io-agentic-access.yml
 - type: TrustCenter

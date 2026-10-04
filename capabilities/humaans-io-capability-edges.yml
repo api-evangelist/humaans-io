@@ -1,0 +1,79 @@
+slug: humaans-io
+provider: Humaans
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 7
+edges:
+- tag: Compensations
+  spec_file: humaans-io-compensations-api-openapi.yml
+  capability_id: BC-300.30
+  capability_id_l1: BC-300
+  capability_name: Compensation & Benefits Management
+  confidence: 0.92
+  evidence: POST /compensations  createCompensation  Create Compensation; OAuth scopes (compensations:read,
+    compensations:write)
+  reason: CRUD over employee compensation records in an HRIS — pay structures and compensation administration.
+- tag: People
+  spec_file: humaans-io-people-api-openapi.yml
+  capability_id: BC-300.70
+  capability_id_l1: BC-300
+  capability_name: HR Operations Management
+  confidence: 0.9
+  evidence: 'GET /people listPeople List People; schemas: Person, PersonList; "employee directory"'
+  reason: Employee master records in an HRIS — core HR operations / employee records management.
+- tag: Performance
+  spec_file: humaans-io-performance-api-openapi.yml
+  capability_id: BC-300.20
+  capability_id_l1: BC-300
+  capability_name: Talent Management
+  confidence: 0.88
+  evidence: GET /performance-reviews listPerformanceReviews List Performance Reviews; GET /performance-cycles
+    listPerformanceCycles
+  reason: Performance review cycles and templates are performance/talent management within HCM.
+- tag: Time Away
+  spec_file: humaans-io-time-away-api-openapi.yml
+  capability_id: BC-300.70
+  capability_id_l1: BC-300
+  capability_name: HR Operations Management
+  confidence: 0.75
+  evidence: GET /time-away-policies listTimeAwayPolicies; GET /time-away-allocations listTimeAwayAllocations
+  reason: Absence/time-off requests, types, policies and allocations are HR administrative service delivery
+    (leave administration) within HCM.
+- tag: Bank Accounts
+  spec_file: humaans-io-bank-accounts-api-openapi.yml
+  capability_id: BC-300.70
+  capability_id_l1: BC-300
+  capability_name: HR Operations Management
+  confidence: 0.7
+  evidence: POST /bank-accounts  createBankAccount  Create Bank Account; within "The Humaans HRIS API
+    exposes the People, Compensations, ... resources of the Humaans system of record"
+  reason: Employee bank-account records held in an HRIS for payroll disbursement — HR operations/employee
+    master data and payroll administration, not corporate treasury banking.
+- tag: Documents
+  spec_file: humaans-io-documents-api-openapi.yml
+  capability_id: BC-300.70
+  capability_id_l1: BC-300
+  capability_name: HR Operations Management
+  confidence: 0.7
+  evidence: POST /documents  createDocument; "exposes the People, Compensations, Time Away, Documents,
+    ... resources of the Humaans system of record"
+  reason: Employee document records within an HRIS system of record — part of employee records/HR service
+    delivery rather than generic content or contract management.
+- tag: Timesheet
+  spec_file: humaans-io-timesheet-api-openapi.yml
+  capability_id: BC-300.70
+  capability_id_l1: BC-300
+  capability_name: HR Operations Management
+  confidence: 0.7
+  evidence: GET /timesheet-entries listTimesheetEntries; GET /timesheet-submissions listTimesheetSubmissions
+  reason: Time recording and submission in an HRIS feeds HR/payroll administration; mapped to HR Operations
+    within HCM.
