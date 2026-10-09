@@ -1,0 +1,30 @@
+# Front Door AI Index — humaans-io — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: humaans-io
+  lexicon_version: '1.0'
+  probed_at: '2026-09-25'
+  host: humaans.io
+  final_host: humaans.io
+  ownership: own
+  owner: humaans-io
+  shares_host_with: null
+  inherited_from: null
+  alias_of: null
+  verdict: scored
+  score: 14
+  band: 5
+  band_label: prominent
+  host_score: 14
+  density: 12.84
+  words: 1090
+  tiers:
+    agentic: 5
+    core: 9
+    model: 0
+  ambiguous: 1
+  top_terms:
+    AI: 9
+    agentic: 5
+    agent: 1
