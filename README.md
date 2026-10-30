@@ -1,4 +1,4 @@
-# Humaans (humaans-io)
+# Humaans
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -83,114 +83,141 @@ learning, and automation, plus a Zapier connector and an Apideck HRIS
 unified-API binding. Trusted by global teams across 300+ locations and
 rated 4.8/5 on G2.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/humaans-io/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/humaans-io/refs/heads/main/apis.yml)
+**Areas:** Human Resources · HRIS · People Operations · People Analytics · Onboarding · Offboarding · Performance Management · Time Off · Compensation · Workflow Automation · AI Companion · AI Agents
 
-## Scope
+## Humaans on APIs.io
 
-- **Position:** Producing
-- **Access:** 3rd-Party
+Everything profiled for Humaans is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/humaans-io/](https://apis.io/providers/humaans-io/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (15)
 
-- HR
-- HRIS
-- Human Resources
-- People Operations
-- People Analytics
-- Onboarding
-- Offboarding
-- Performance Management
-- Time Off
-- Compensation
-- Workflow Automation
-- AI Companion
-- Agentic AI
-- UK
-- London
+- [Humaans Audit Events API](https://apis.io/apis/humaans-io/humaans-io-audit-events-api/) — Read-only audit trail
+- [Humaans Bank Accounts API](https://apis.io/apis/humaans-io/humaans-io-bank-accounts-api/) — Employee bank account records
+- [Humaans Companies API](https://apis.io/apis/humaans-io/humaans-io-companies-api/) — Tenant company record
+- [Humaans Compensations API](https://apis.io/apis/humaans-io/humaans-io-compensations-api/) — Salary, bonus, and compensation history
+- [Humaans Custom Fields API](https://apis.io/apis/humaans-io/humaans-io-custom-fields-api/) — Tenant-defined custom field definitions and values
+- [Humaans Documents API](https://apis.io/apis/humaans-io/humaans-io-documents-api/) — Personal and company document storage
+- [Humaans Equipment API](https://apis.io/apis/humaans-io/humaans-io-equipment-api/) — Equipment assigned to employees
+- [Humaans Job Roles API](https://apis.io/apis/humaans-io/humaans-io-job-roles-api/) — Position and role definitions
+- [Humaans Locations API](https://apis.io/apis/humaans-io/humaans-io-locations-api/) — Office and remote work locations
+- [Humaans People API](https://apis.io/apis/humaans-io/humaans-io-people-api/) — Employee records, the canonical resource of the HRIS
+- [Humaans Performance API](https://apis.io/apis/humaans-io/humaans-io-performance-api/) — Performance reviews, cycles, templates, and ratings
+- [Humaans Time Away API](https://apis.io/apis/humaans-io/humaans-io-time-away-api/) — Time off, holidays, leave allocations, policies, and types
+- [Humaans Timesheet API](https://apis.io/apis/humaans-io/humaans-io-timesheet-api/) — Timesheet entries and submissions
+- [Humaans Webhooks API](https://apis.io/apis/humaans-io/humaans-io-webhooks-api/) — Outbound HMAC-signed event subscriptions
+- [Humaans Working Patterns API](https://apis.io/apis/humaans-io/humaans-io-working-patterns-api/) — Work schedule patterns
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-25T00:00:00.000Z
-- **Modified:** 2026-05-25
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### MCP servers (1)
 
-### Humaans API
+Model Context Protocol servers that expose the API to agents.
 
-REST API for the Humaans HRIS exposing People, Companies, Compensations,
-Bank Accounts, Documents, Time Away (entries, allocations, policies, types),
-Equipment, Job Roles, Locations, Custom Fields and Values, Performance
-(reviews, cycles, templates, ratings), Timesheet entries and submissions,
-Webhooks, Audit Events, and Working Patterns. Bearer token authentication
-with OAuth-style scopes (public:read, private:read, private:write,
-compensations:read/write, documents:read/write, webhooks:manage). JSON in /
-JSON out, standard HTTP verbs, $limit/$skip pagination, $in/$nin/$gt/$gte/$lt/$lte/$or
-filter operators, and HMAC SHA-256 signed webhook deliveries with retry and
-automatic disablement after 5 days of failures.
+- [humaans-io](https://apis.io/servers/humaans-io/humaans-io/)
 
-- **Human URL:** [https://docs.humaans.io/api/](https://docs.humaans.io/api/)
-- **Base URL:** `https://app.humaans.io/api`
+#### Agentic access (1)
 
-#### Tags
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- HR
-- HRIS
-- Human Resources
-- People Operations
-- Employees
-- Time Off
-- Compensation
-- Payroll
-- Onboarding
-- Performance
-- Timesheets
-- Webhooks
+- [Humaans Io Agentic Access](https://apis.io/agentic-access/humaans-io/humaans-io-agentic-access/)
 
-#### Properties
+#### Collections (16)
 
-- [Documentation](https://docs.humaans.io/api/)
-- [Documentation](https://docs.humaans.io/api/introduction)
-- [OpenAPI](openapi/humaans-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/humaans-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/humaans-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Postman and Open Collection request collections.
 
-## Common Properties
+- [Humaans API](https://apis.io/collections/humaans-io/open-humaans-api/)
+- [Humaans Audit Events API](https://apis.io/collections/humaans-io/open-humaans-io-audit-events-api/)
+- [Humaans Audit Events Bank Accounts API](https://apis.io/collections/humaans-io/open-humaans-io-bank-accounts-api/)
+- [Humaans Audit Events Companies API](https://apis.io/collections/humaans-io/open-humaans-io-companies-api/)
+- [Humaans Audit Events Compensations API](https://apis.io/collections/humaans-io/open-humaans-io-compensations-api/)
+- [Humaans Audit Events Custom Fields API](https://apis.io/collections/humaans-io/open-humaans-io-custom-fields-api/)
+- [Humaans Audit Events Documents API](https://apis.io/collections/humaans-io/open-humaans-io-documents-api/)
+- [Humaans Audit Events Equipment API](https://apis.io/collections/humaans-io/open-humaans-io-equipment-api/)
+- [Humaans Audit Events Job Roles API](https://apis.io/collections/humaans-io/open-humaans-io-job-roles-api/)
+- [Humaans Audit Events Locations API](https://apis.io/collections/humaans-io/open-humaans-io-locations-api/)
+- [Humaans Audit Events People API](https://apis.io/collections/humaans-io/open-humaans-io-people-api/)
+- [Humaans Audit Events Performance API](https://apis.io/collections/humaans-io/open-humaans-io-performance-api/)
+- [Humaans Audit Events Time Away API](https://apis.io/collections/humaans-io/open-humaans-io-time-away-api/)
+- [Humaans Audit Events Timesheet API](https://apis.io/collections/humaans-io/open-humaans-io-timesheet-api/)
+- [Humaans Audit Events Webhooks API](https://apis.io/collections/humaans-io/open-humaans-io-webhooks-api/)
+- [Humaans Audit Events Working Patterns API](https://apis.io/collections/humaans-io/open-humaans-io-working-patterns-api/)
 
-- [Portal](https://humaans.io)
-- [Web Site](https://humaans.io)
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Humaans Io Authentication](https://apis.io/security/humaans-io/humaans-io-authentication/)
+- [Humaans Io Domain Security](https://apis.io/security/humaans-io/humaans-io-domain-security/)
+- [Humaans Io Trust Center](https://apis.io/security/humaans-io/humaans-io-trust-center/)
+- [Humaans Io Vulnerability Disclosure](https://apis.io/security/humaans-io/humaans-io-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://humaans.io)
 - [Documentation](https://docs.humaans.io)
-- [Documentation](https://docs.humaans.io/api/)
-- [Getting Started](https://docs.humaans.io/api/introduction)
-- [Sign In](https://app.humaans.io)
-- [Sign Up](https://humaans.io/get-started)
+- [Getting started](https://docs.humaans.io/api/introduction)
 - [Pricing](https://humaans.io/pricing)
-- [Integrations](https://humaans.io/integrations)
-- [Security](https://humaans.io/security)
-- [Privacy Policy](https://humaans.io/legal/privacy-policy)
-- [Terms of Service](https://humaans.io/legal/terms-of-service)
-- [Documentation](https://humaans.io/legal/dpa)
-- [Documentation](https://humaans.io/legal/sub-processors)
 - [Blog](https://humaans.io/blog)
-- [Case Studies](https://humaans.io/customers)
-- [About](https://humaans.io/about)
-- [Careers](https://humaans.io/careers)
-- [Contact](https://humaans.io/contact)
-- [Support](mailto:hi@humaans.io)
-- [LinkedIn](https://www.linkedin.com/company/humaans)
-- [Twitter](https://twitter.com/humaans_io)
-- [GitHub Organization](https://github.com/humaans)
-- [SDK](https://github.com/humaans/figbird)
-- [SDK](https://github.com/humaans/next-img)
-- [SDK](https://github.com/humaans/react-machine)
-- [SDK](https://github.com/humaans/react-space-router)
-- [Tool](https://github.com/humaans/workalendar)
-- [Application](https://apps.apple.com/app/humaans/id1610537316)
-- [Application](https://play.google.com/store/apps/details?id=io.humaans)
-- [Reviews](https://www.g2.com/products/humaans/reviews)
-- [Features](undefined)
+- [Security](https://humaans.io/security)
+- [Terms of service](https://humaans.io/legal/terms-of-service)
+- [Privacy policy](https://humaans.io/legal/privacy-policy)
+- [GitHub](https://github.com/humaans)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** info@apievangelist.com
-**URL:** https://apievangelist.com
+**Kin Score 46.0** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 68.3 |
+| Contract quality | 48.7 |
+| Contract governance | 0.0 |
+| Operational transparency | 15.8 |
+| Developer ergonomics | 66.7 |
+| Access clarity | 52.6 |
+
+**Agent readiness 45.2** — agent-ready (gated down from agent-native)
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | paginated |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 30.4** — Employment & Payroll
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/humaans-io/](https://apis.io/providers/humaans-io/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Humaans: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/humaans-io/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
